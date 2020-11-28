@@ -16,7 +16,7 @@ Function<State, String> selector = Reselect.createCachedSelector(
 There are `createCachedSelector` overloads taking 1 or 2 selectors.
 
 For an arbitrary number of selectors, the order of arguments is inverted 
-compared to *Reselect* so we can benefit from varargs. Then only issue is
+compared to *Reselect* so we can benefit from varargs. The only issue is
 that parameters need a cast, e.g.
 
 ```java
@@ -29,7 +29,6 @@ that parameters need a cast, e.g.
       },
       orangeSelector,
       applesSelector,
-      bananaSelector,
-      ...);
+      bananaSelector);
 );
 ```
